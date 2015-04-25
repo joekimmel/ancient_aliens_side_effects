@@ -13,12 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150425180927) do
 
-  create_table "foo_groups", force: :cascade do |t|
-    t.integer  "fooperty_id", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "foo_orders", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -27,9 +21,8 @@ ActiveRecord::Schema.define(version: 20150425180927) do
   end
 
   create_table "foonits", force: :cascade do |t|
-    t.integer  "fooperty_id",  null: false
-    t.integer  "foo_group_id", null: false
-    t.string   "name",         null: false
+    t.integer  "fooperty_id", null: false
+    t.string   "name",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
